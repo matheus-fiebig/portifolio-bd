@@ -1,0 +1,1 @@
+INSERT INTO etapa_extrato VALUES (5, 'Aprovada pelo Gestor');

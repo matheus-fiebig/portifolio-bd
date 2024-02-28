@@ -1,0 +1,4 @@
+spring.datasource.url=jdbc:mysql://localhost/api3sem
+spring.datasource.username=root
+spring.datasource.password=root
+flyway.locations=classpath:db/migration

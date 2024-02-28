@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Sprints</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list" id="menu-navbar">
+                        
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <!-- Search -->
+
+                            <div class="form-header invisible" action="" method="POST" id="form">
+                                <input class="au-input au-input--xl" type="hidden" name="search"
+                                    placeholder="Search for datas &amp; reports..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </div>
+
+                            <!-- Search -->
+                            <div class="header-button">
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu" style="cursor: default">
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#" id="username"></a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="account-dropdown__footer">
+                                                <a href="login.html">
+                                                    <i class="zmdi zmdi-power"></i>Sair</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+            
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- DATA TABLE -->
+                                <h3 class="title-5 m-b-35">Sprint</h3>
+                                <div class="table-data__tool">
+                                    <div class="table-data__tool-right ml-auto">
+                                        <button 
+                                            class="au-btn au-btn-icon au-btn--green au-btn--small" 
+                                            data-toggle="modal" 
+                                            data-target="#createsprint"
+                                            onclick="clearForm()"
+                                        >
+                                            <i class="zmdi zmdi-plus"></i>Adicionar
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="table-responsive table-responsive-data2">
+                                    <table class="table table-data2">
+                                        <thead>
+                                            <tr>
+                                                <th>Sprint</th>
+                                                <th>Data de Inicio</th>
+                                                <th>Data de Entrega</th>
+                                                <th>Time</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody-sprint">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- END DATA TABLE -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- modal cria e altera sprint -->
+        <div class="modal fade" id="createsprint" tabindex="-1" role="dialog" aria-labelledby="createsprint"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createsprint">Criar Sprint</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="sprint-form" name="sprint-form">
+                            <input class="au-input au-input--full" type="hidden" name="id" id="id" value="0">
+                            <div class="login-form">
+                                <div class="form-group">
+                                    <label>Nome da Sprint</label>
+                                    <input class="au-input au-input--full" type="text'" name="name" id="name" placeholder="Ex: Projeto">
+                                </div>
+                                <div class="form-group">
+                                    <label>Data de Inicio</label>
+                                    <input class="au-input au-input--full" type="date" name="start_date" id="start_date" placeholder="Ex: dd/mm/aaaa">
+                                </div>
+                                <div class="form-group">
+                                    <label>Data de Entrega</label>
+                                    <input class="au-input au-input--full" type="date" name="end_date" id="end_date" placeholder="Ex: dd/mm/aaaa">
+                                </div>
+                                <div class="form-group">
+                                    <label>Avaliação libererada até</label>
+                                    <input class="au-input au-input--full" type="date" name="evaluation_range" id="evaluation_range" placeholder="Ex: dd/mm/aaaa">
+                                </div>
+
+                                <div class="container m-t-30">
+                                    Cadastrar para
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                                <button id="timesC" class="btn btn-link nav-link active" type="button" onclick="changeType('team')">Times</button>
+                                            </li>
+                                            <li class="nav-item">
+                                                <button id="turmasC" class="btn btn-link nav-link" type="button" onclick="changeType('group')">Turmas</button>
+                                            </li>
+                                        </ul>
+                                        <div class="form-group m-t-10">
+                                            <select class="form-control" id="team_id" name="team_id" style="height: 43px;font-size: 13px">
+                                                <option disabled selected value="-1">Selecionar</option>
+                                            </select>
+                                        </div>
+                                </div>
+                                
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" style="height: 35px; width: 65px; font-size: 13px;" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="button" style="height: 35px; width: 65px; font-size: 13px;" class="btn btn-primary" onclick="insertOrUpdate()">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js"> </script>
+    <script src="js/sidebar.js"></script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+    <script src="js/consts.js"></script>
+    <script src="js/sprint.js"></script>
+    <script src="js/teams.js"></script>
+    <script src="js/groups.js"></script>
+
+<script>
+        document.getElementById('username').innerHTML = JSON.parse(window.localStorage.getItem('user')).usuario;
+        
+        var isTeamChoosed = true;
+        
+        loadSprints();
+        loadComboTeams();
+
+        async function loadSprints() {
+            var sprints = await getSprints();
+            var times = await getTeams();
+            var tbody = document.getElementById('tbody-sprint');
+           
+            for (var i = 0; i < sprints.length; i++) {
+                tbody.innerHTML += `
+                    <tr class=\"tr-shadow\"> 
+                        <td> ${sprints[i].name} </td>
+                        <td> ${sprints[i].start_date} </td>
+                        <td> ${sprints[i].end_date }</td>
+                        <td> ${times.filter(x => x.id == sprints[i].team_id)[0]?.times} </td>
+                        <td>
+                            <div class=\"table-data-feature\">
+                                <button 
+                                    class=\"item\" 
+                                    data-toggle=\"modal\" 
+                                    data-target=\"#createsprint\" 
+                                    data-placement=\"top\"
+                                    title=\"Editar\" 
+                                    onclick=\"loadSprint(${sprints[i].id})\"
+                                >
+                                    <i class=\"zmdi zmdi-edit\"></i>
+                                </button>
+                                <button 
+                                    class=\"item\" 
+                                    data-toggle=\"tooltip\" 
+                                    data-placement=\"top\"
+                                    title=\"Deletar\" 
+                                    onclick=\"deleteSprint(${sprints[i].id})\"
+                                > 
+                                    <i class=\"zmdi zmdi-delete text-danger\"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class=\"spacer\">
+                    </tr>
+                `
+            }
+        }
+
+        async function loadComboTeams(){
+            var times = await getTeams();
+            
+            var selectTeams = document.getElementById("team_id")
+            selectTeams.innerHTML = ''
+            for(var i = 0; i < times.length; i++){
+                selectTeams.innerHTML += `<option value=${times[i].id}>${times[i].times}</option>`
+            }
+        }
+
+        async function loadComboGroups(){
+            var groups = await getGroups();
+            
+            var selectTeams = document.getElementById("team_id")
+            selectTeams.innerHTML = ''
+            for(var i = 0; i < groups.length; i++){
+                selectTeams.innerHTML += `<option value=${groups[i].id}>${groups[i].name}</option>`
+            }
+        }
+
+        async function loadSprint(id){
+            var sprint = await getSprintsById(id)
+            jsonToForm(sprint);
+
+            document.getElementById('turmasC').classList.add('disabled')
+        }
+
+        function insertOrUpdate(){
+            var json = formToJson("sprint-form");
+
+            if(json["id"] == 0){
+                if(!isTeamChoosed) {
+                    createSprintForGroup(json)
+                    return;
+                }
+                createSprint(json);
+                return;
+            }
+
+            updateSprint(json)
+        }
+
+        async function changeType(nav){
+            isTeamChoosed = nav == 'team';
+            
+            if(!isTeamChoosed){
+                await loadComboGroups();
+                document.getElementById('timesC').classList.remove('active')
+                document.getElementById('turmasC').classList.add('active')
+                return;
+            }
+            
+            await loadComboTeams();
+            document.getElementById('turmasC').classList.remove('active')
+            document.getElementById('timesC').classList.add('active')
+
+        }
+
+        function clearForm(){
+            let f = document.getElementById("sprint-form");
+            f.reset();
+
+            $('#teams').val(null).trigger('change');
+            document.getElementById('id').value = 0;
+
+            
+            document.getElementById('turmasC').classList.remove('disabled')
+            $('#timesC').tab('show')
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

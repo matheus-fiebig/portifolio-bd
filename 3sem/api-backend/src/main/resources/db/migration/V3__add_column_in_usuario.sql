@@ -1,0 +1,2 @@
+ALTER TABLE Usuario ADD COLUMN Id_Autenticacao_Usuario int NOT NULL;
+ALTER TABLE Usuario ADD CONSTRAINT Usuario_Autenticacao_FK FOREIGN KEY (Id_Autenticacao_Usuario) REFERENCES autenticacao_usuario (id);
