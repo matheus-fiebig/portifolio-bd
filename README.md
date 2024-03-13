@@ -43,26 +43,38 @@ Por fim, para o usuário, foi desenvolvida a funcionalidade de lançamento de ho
 [GIT](https://github.com/matheus-fiebig/portifolio-bd/tree/main/3sem)
 
 #### Tecnologias Utilizadas
-**TODO <br>**
-- Java
-- Springboot
-- Typescript
-- Vue
-- MySQL
+- Java: Linguagem principal utilizada no nosso backend. Linguagem amplamente adotada no desenvolvimento web e mobile. Orientada a objeto e a principal linguagem ensinada na FATEC
 
-**Apresente brevemente as tecnologias utilizadas. Uma tecnologia por linha. Indique qual a importância de cada tecnologia para o projeto.**
+- Springboot: Principal framework de desenvolvimento web, utilizado para configuração e organização do projeto, criação de endpoints, persistência de dados e segurança da nossa API  
+
+- Typescript: Linguagem de desenvolvimento frontend. Facilita a depuração a manutenção do código, uma vez que, é tipada.
+
+- Vue: Framework de desenvolvimento frontend. Facilita a manutenção e permitir a componentização de itens.  
+
+- MySQL: Sua confiabilidade, desempenho e facilidade de uso garatiram sua escolha.Permite realizar a persistência e integridade dos dados do sistema.
+
 
 #### Contribuições Pessoais
 **TODO <br>**
 
-Nesse projeto foquei apenas no frontend, utilizando as tecnologias de vue e typescript.
+Nesse projeto atuei em duas frentes 
+- Frontend: utilizando as tecnologias de vue e typescript e
+- Product Owner
 
-- Menu Lateral
-- Tela de Lançamento de Horas
-- Funcionalidade de Aprovação/Reprovação de Horas
-- Tela de CR
-- Tela de parametrização
-- Tela de Dashboard
+Como desenvolvedor minhas contribuições foram
+#### - Organização do Projeto
+#### - Criação do menu lateral
+    Desenvolvimento e componentização do menu lateral. Ele foi
+#### - Tela de lançamento de horas
+#### - Funcionalidade de aprovação/reprovação de horas
+#### - Tela de C.R.
+#### - Tela de parametrização
+#### - Tela de dashboard
+
+Como Product Owner
+- Organização do Backlog
+- Organização das prioridades
+- Criação de histórias
 
 **Apresente suas contribuições no projeto. Foque nas funcionalidades em que você mais atuou. Descreva sua atuação em detalhes, especificando que tecnologias você utilizou.**
 
